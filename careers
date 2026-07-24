@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | The Bando ATL</title>
+<meta name="description" content="Join The Bando ATL team. View open positions and apply online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Roboto+Condensed:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #050505;
+    --black-soft: #0d0d0d;
+    --charcoal: #171717;
+    --ash: #a7a7a7;
+    --cream: #f3ede0;
+    --red: #d9251d;
+    --red-deep: #a91913;
+    --gold: #f0c929;
+    --line: rgba(255,255,255,0.12);
+    --panel: rgba(12,12,12,0.92);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    background:
+      linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
+      radial-gradient(circle at top left, rgba(240,201,41,0.04), transparent 24%),
+      radial-gradient(circle at bottom right, rgba(217,37,29,0.10), transparent 26%),
+      repeating-linear-gradient(0deg, #070707 0, #070707 2px, #0a0a0a 2px, #0a0a0a 5px);
+    color: var(--cream);
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.32) 0 1px, transparent 1.4px),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.24) 0 1px, transparent 1.3px),
+      linear-gradient(135deg, transparent 0 49%, rgba(255,255,255,0.03) 49% 50%, transparent 50% 100%);
+    background-size: 10px 10px, 12px 12px, 140px 140px;
+    mix-blend-mode: screen;
+    z-index: 2;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .top-strip {
+    background: linear-gradient(90deg, var(--red-deep), var(--red));
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .88rem;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px 0;
+  }
+  .top-strip span {
+    display: inline-block;
+    min-width: max-content;
+    animation: marquee 24s linear infinite;
+  }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,5,5,0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .brand img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+  }
+  .brand-text {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .brand-text small {
+    display: block;
+    font-size: .72rem;
+    color: var(--ash);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+  .brand-text span {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 34px);
+  }
+  .nav-links:empty { display: none; }
+  .nav-links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    font-size: .92rem;
+    letter-spacing: 1px;
+    color: #ddd6c8;
+    position: relative;
+    transition: color .18s ease;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -7px;
+    height: 2px;
+    background: var(--gold);
+    transition: right .2s ease;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a:hover::after { right: 0; }
+  .apply-nav {
+    text-decoration: none;
+    background: var(--gold);
+    color: #111;
+    border: 1px solid #111;
+    padding: 13px 20px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background .18s ease, transform .18s ease;
+  }
+  .apply-nav:hover { background: #ffd83d; transform: translateY(-1px); }
+  .hero {
+    position: relative;
+    min-height: 760px;
+    padding: 0 24px;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.88) 42%, rgba(0,0,0,.62) 100%),
+      radial-gradient(circle at 75% 30%, rgba(217,37,29,0.16), transparent 55%),
+      url("https://static.wixstatic.com/media/12e68b_17858c33c69e4c4fb37d691177a0059b~mv2.jpg/v1/fill/w_1450,h_767,q_90/12e68b_17858c33c69e4c4fb37d691177a0059b~mv2.jpg") center/cover no-repeat;
+    background-blend-mode: normal, multiply, normal;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.25)),
+      repeating-linear-gradient(90deg, transparent 0 180px, rgba(255,255,255,0.02) 180px 181px);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, .7fr);
+    gap: 42px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 84px 0;
+  }
+  .hero-copy { max-width: 720px; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .95rem;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 42px;
+    height: 2px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(3.6rem, 7.5vw, 6.8rem);
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+    text-shadow: 0 3px 18px rgba(0,0,0,.35);
+  }
+  .hero h1 .accent {
+    color: var(--red);
+    font-family: "Permanent Marker", cursive;
+    text-transform: none;
+    letter-spacing: 0;
+    display: inline-block;
+    font-size: .7em;
+    vertical-align: -0.02em;
+  }
+  .hero p {
+    font-size: clamp(1rem, 1.45vw, 1.18rem);
+    color: #ddd6ca;
+    max-width: 650px;
+    margin-bottom: 34px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+  }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { background: #ed2d25; transform: translateY(-1px); }
+  .btn-secondary {
+    border-color: rgba(255,255,255,0.24);
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.42); }
+  .hero-panel {
+    justify-self: end;
+    width: min(420px, 100%);
+    background: linear-gradient(180deg, rgba(13,13,13,.98), rgba(5,5,5,.99));
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 60px rgba(0,0,0,.55);
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(135deg, transparent 0 28px, rgba(255,255,255,0.02) 28px 29px);
+  }
+  .hero-panel-head {
+    background: linear-gradient(90deg, var(--gold), #ffd83d);
+    color: #111;
+    padding: 16px 22px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .95rem;
+  }
+  .hero-panel-body { padding: 26px 24px 28px; }
+  .hero-panel h2 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: .96;
+    margin-bottom: 18px;
+  }
+  .hero-panel p {
+    color: #ccc5b9;
+    margin-bottom: 20px;
+  }
+  .role-list {
+    list-style: none;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .role-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .role-list li span {
+    color: var(--gold);
+    font-size: .82rem;
+    white-space: nowrap;
+  }
+  .hero-panel .location {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-size: .92rem;
+  }
+  .section-shell {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 88px 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .section-kicker {
+    font-family: "Anton", sans-serif;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+    line-height: .95;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .section-title .accent {
+    font-family: "Permanent Marker", cursive;
+    text-transform: none;
+    letter-spacing: 0;
+    display: inline-block;
+    font-size: .68em;
+  }
+  .section-title .accent { color: var(--red); }
+  .section-sub {
+    max-width: 720px;
+    color: var(--ash);
+    font-size: 1.06rem;
+  }
+  .why-section {
+    background: linear-gradient(180deg, rgba(8,8,8,.96), rgba(12,12,12,.96));
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .why-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .why-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 20px 20px;
+    min-height: 0;
+    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .why-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 14px; bottom: 14px;
+    width: 3px;
+    border-radius: 2px;
+    background: var(--red);
+    opacity: .55;
+  }
+  .why-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(240,201,41,0.28);
+    background: rgba(255,255,255,0.04);
+  }
+  .why-card .number {
+    font-family: "Anton", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1;
+    color: var(--red);
+    letter-spacing: 1px;
+    opacity: .85;
+    margin-bottom: 14px;
+  }
+  .why-card h3 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .why-card p { color: #d1cbbf; font-size: .92rem; line-height: 1.45; }
+  .positions-section {
+    background: linear-gradient(180deg, #111 0%, #090909 100%);
+  }
+  .positions-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+    flex-wrap: wrap;
+  }
+  .positions-list {
+    margin-top: 44px;
+    border-top: 1px solid rgba(255,255,255,0.14);
+  }
+  .job-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  .job-copy h3 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+    line-height: .98;
+    text-transform: uppercase;
+    letter-spacing: -.3px;
+    margin-bottom: 10px;
+  }
+  .job-meta {
+    color: #d6d0c3;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-size: .95rem;
+  }
+  .job-meta span { color: var(--gold); }
+  .job-apply {
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    background: var(--gold);
+    padding: 13px 22px;
+    transition: background .18s ease, transform .18s ease;
+  }
+  .job-apply:hover { background: #ffd83d; transform: translateY(-1px); }
+  .rolling-note {
+    margin-top: 24px;
+    color: var(--ash);
+    font-size: 1rem;
+  }
+  .apply-section {
+    background:
+      linear-gradient(180deg, rgba(17,17,17,.96), rgba(9,9,9,.98)),
+      repeating-linear-gradient(0deg, transparent 0 26px, rgba(255,255,255,.02) 26px 27px);
+    border-top: 1px solid var(--line);
+  }
+  .form-layout {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: .62fr 1.38fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .form-side {
+    position: sticky;
+    top: 110px;
+    background: linear-gradient(180deg, rgba(217,37,29,.18), rgba(255,255,255,.02));
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 28px 24px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  }
+  .form-side .mini-kicker {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-size: .9rem;
+    margin-bottom: 16px;
+  }
+  .form-side h3 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: .95;
+    margin-bottom: 16px;
+  }
+  .form-side p {
+    color: #d8d0c3;
+    margin-bottom: 14px;
+  }
+  .form-side strong { color: #fff; }
+  .form-side ul {
+    list-style: none;
+    margin: 18px 0 20px;
+  }
+  .form-side li {
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #e5dfd4;
+  }
+  .form-wrap {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: clamp(24px, 4vw, 42px);
+  }
+  form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  form .field { margin-bottom: 20px; }
+  form label {
+    display: block;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    margin-bottom: 8px;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    width: 100%;
+    background: #111;
+    color: var(--cream);
+    border: 1px solid rgba(255,255,255,0.16);
+    padding: 14px 15px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .file-drop {
+    position: relative;
+    border: 1px dashed rgba(255,255,255,0.32);
+    background: rgba(255,255,255,0.02);
+    padding: 34px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .18s ease, background .18s ease;
+  }
+  .file-drop:hover,
+  .file-drop.dragover {
+    border-color: var(--gold);
+    background: rgba(240,201,41,0.06);
+  }
+  .file-drop input[type="file"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .file-label { color: #ddd6c8; font-weight: 700; }
+  .file-label strong { color: var(--gold); }
+  #file-name {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 700;
+  }
+  small.hint {
+    display: block;
+    color: var(--ash);
+    margin-top: 8px;
+    font-size: .86rem;
+  }
+  .submit-btn {
+    width: 100%;
+    border: none;
+    background: var(--red);
+    color: #fff;
+    min-height: 56px;
+    font-family: "Anton", sans-serif;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: background .18s ease, transform .18s ease;
+  }
+  .submit-btn:hover { background: #ec2d24; transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: .65; cursor: not-allowed; }
+  #form-status {
+    margin-top: 16px;
+    display: none;
+    padding: 12px 14px;
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  #form-status.success { display: block; background: rgba(46,125,50,.22); color: #d0ffd2; }
+  #form-status.error { display: block; background: rgba(183,28,28,.24); color: #ffd6d6; }
+  footer {
+    border-top: 1px solid var(--line);
+    background: #060606;
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 58px 24px;
+    display: grid;
+    grid-template-columns: 1.25fr .9fr .9fr;
+    gap: 28px;
+  }
+  .footer-logo {
+    width: 130px;
+    margin-bottom: 16px;
+  }
+  footer h3 {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+  }
+  footer p, footer a {
+    color: #d6d0c3;
+    text-decoration: none;
+  }
+  footer a:hover { color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 24px 22px;
+    text-align: center;
+    color: #7e7e7e;
+    font-size: .88rem;
+  }
+
+  /* ===================== URBAN / STREET ENHANCEMENTS ===================== */
+
+  /* thin gold divider between sections (was a full hazard-stripe bar) */
+  .hazard-bar {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: .6;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* graffiti tag font utility */
+  .tag-font { font-family: "Permanent Marker", cursive; text-transform: none; letter-spacing: 0; }
+
+  /* small brand stamp badge (kept subtle) */
+  .spray-stamp {
+    position: absolute;
+    z-index: 3;
+    font-family: "Permanent Marker", cursive;
+    color: var(--gold);
+    background: rgba(5,5,5,0.6);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.05;
+    font-size: .6rem;
+    transform: rotate(-6deg);
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    padding: 6px;
+    pointer-events: none;
+  }
+  .spray-stamp.stamp-hero {
+    top: 18px;
+    right: 24px;
+  }
+
+  /* soft accent glow behind big headlines (was busy spray-splatter dots) */
+  .section-title.spray-behind,
+  .hero h1.spray-behind {
+    position: relative;
+  }
+  .section-title.spray-behind::before,
+  .hero h1.spray-behind::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -18px -14px auto -14px;
+    height: 70%;
+    opacity: .35;
+    background-image: radial-gradient(circle 90px at 4% 30%, rgba(240,201,41,0.16), transparent 72%);
+  }
+
+  /* small paint-drip accent under a word (pure CSS, no external art) */
+  .drip-wrap { position: relative; display: inline-block; padding-bottom: 4px; }
+  .drip-wrap::after {
+    content: "";
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    bottom: -14px;
+    height: 14px;
+    opacity: .8;
+    background-image:
+      radial-gradient(circle 3px at 10% 0, var(--red) 98%, transparent 100%),
+      radial-gradient(circle 4px at 32% 0, var(--red) 98%, transparent 100%),
+      radial-gradient(circle 2px at 32% 8px, var(--red) 98%, transparent 100%),
+      radial-gradient(circle 3px at 58% 0, var(--red) 98%, transparent 100%),
+      radial-gradient(circle 3px at 80% 0, var(--red) 98%, transparent 100%),
+      linear-gradient(180deg, var(--red), var(--red) 3px, transparent 3px);
+    background-repeat: no-repeat;
+  }
+
+  /* subtle textured background, kept understated */
+  .concrete-bg {
+    background-image:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 60px),
+      linear-gradient(135deg, #1a1a1a, #0c0c0c 60%);
+    background-blend-mode: normal, overlay, normal;
+  }
+
+  /* faint diagonal texture, dialed down from a chain-link fence pattern */
+  .chainlink-overlay { position: relative; }
+  .chainlink-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .025;
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.9) 0 1px, transparent 1px 30px);
+    mix-blend-mode: screen;
+  }
+
+  /* clean top accent line on card hover (was a jagged torn edge) */
+  .why-card, .job-card { position: relative; }
+  .why-card::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .22s ease;
+  }
+  .why-card:hover::after { transform: scaleX(1); }
+
+  /* clean label chip used for small section eyebrows */
+  .stencil-label {
+    display: inline-block;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .76rem;
+    color: #111;
+    background: var(--gold);
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 700px) {
+    .spray-stamp { width: 56px; height: 56px; font-size: .52rem; top: 10px; right: 10px; }
+  }
+
+  @media (max-width: 1020px) {
+    .nav-links { display: none; }
+    .hero-inner,
+    .form-layout,
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+    .hero-panel { justify-self: start; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-side { position: static; }
+  }
+  @media (max-width: 700px) {
+    nav { padding: 14px 16px; grid-template-columns: 1fr auto; }
+    .brand-text { display: none; }
+    .apply-nav { padding: 11px 14px; font-size: .84rem; }
+    .hero { min-height: auto; padding: 0 16px; }
+    .hero-inner { padding: 60px 0 70px; }
+    .hero h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
+    .section-shell { padding: 72px 16px; }
+    .why-grid,
+    form .row,
+    .job-card { grid-template-columns: 1fr; }
+    .job-apply { justify-self: start; }
+    .positions-header { align-items: start; }
+    .footer-inner { padding: 48px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-strip" aria-hidden="true">
+  <span>Now Hiring • The Bando ATL • West Side Energy • Real Ones Only • Pull Up And Apply • Built Different • Hold It Down • Now Hiring • The Bando ATL • West Side Energy • Real Ones Only • Pull Up And Apply • </span>
+</div>
+<div class="hazard-bar" aria-hidden="true"></div>
+<header>
+  <nav>
+    <a href="#" class="brand" aria-label="The Bando ATL careers page">
+      <div class="brand-text">
+        <small>West Atlanta</small>
+        <span>The Bando ATL</span>
+      </div>
+    </a>
+    <div class="nav-links" aria-hidden="true"></div>
+    <a href="#apply" class="apply-nav">Apply Now</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="spray-stamp stamp-hero" aria-hidden="true">Real Ones<br>Only</div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">West Atlanta · now hiring</div>
+        <h1 class="spray-behind">Come work at <span class="accent drip-wrap">The Bando</span></h1>
+        <p>
+          We are looking for people who can keep up, stay sharp, and hold it down when the line gets crazy. If you know how to hustle, move with purpose, and keep your attitude right, pull up and apply.
+        </p>
+        <div class="hero-actions">
+          <a href="#apply" class="btn btn-primary">Start Your Application</a>
+          <a href="#positions" class="btn btn-secondary">View Open Roles</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Hiring information">
+        <div class="hero-panel-head">Now hiring · pull up</div>
+        <div class="hero-panel-body">
+          <h2>Tap in<br>with us</h2>
+          <p>If you stay ready, move right, and know how to work without all the extra, send that application in.</p>
+          <ul class="role-list">
+            <li>Kitchen Staff / Cook <span>Fast pace</span></li>
+            <li>Front of House / Cashier, Host, or Packer <span>Guest facing</span></li>
+            <li>General Applications <span>Always open</span></li>
+          </ul>
+          <div class="location">3050 M.L.K. Jr Dr. SW, Suite M · Atlanta, GA</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section class="why-section" id="why">
+    <div class="section-shell">
+      <div class="section-kicker"><span class="stencil-label">Why People Mess With Us</span></div>
+      <h2 class="section-title spray-behind">Why work with <span class="accent">The Bando</span></h2>
+      <p class="section-sub">This is not some soft little job posting. It's a culture-heavy spot with motion all day, standards that matter, and a team that has to stay locked in.</p>
+      <div class="why-grid">
+        <article class="why-card">
+          <div class="number">01</div>
+          <h3>Real Culture</h3>
+          <p>You get to be part of a real Atlanta brand, not some watered-down spot with no flavor.</p>
+        </article>
+        <article class="why-card">
+          <div class="number">02</div>
+          <h3>Strong Team</h3>
+          <p>We need people who know how to move together, communicate, and handle business without somebody babysitting them.</p>
+        </article>
+        <article class="why-card">
+          <div class="number">03</div>
+          <h3>Growth Potential</h3>
+          <p>If you come in solid, keep showing up, and do your job right, there is room to grow and level up.</p>
+        </article>
+        <article class="why-card">
+          <div class="number">04</div>
+          <h3>Fast Pace</h3>
+          <p>If you like pressure, fast movement, loud energy, and a place that stays active, you will fit right in.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="positions-section" id="positions">
+    <div class="section-shell">
+      <div class="positions-header">
+        <div>
+          <div class="section-kicker"><span class="stencil-label">Open Slots</span></div>
+          <h2 class="section-title spray-behind">Current <span class="accent">Positions</span></h2>
+        </div>
+        <p class="section-sub">Don't see your exact lane? Send the application anyway. We stay looking for dependable people who know how to work and stay on point.</p>
+      </div>
+      <div class="positions-list">
+        <article class="job-card">
+          <div class="job-copy">
+            <h3>Kitchen Staff / Cook</h3>
+            <div class="job-meta">Full-Time & Part-Time · <span>Atlanta, GA</span></div>
+          </div>
+          <a href="#apply" class="job-apply">Apply</a>
+        </article>
+        <article class="job-card">
+          <div class="job-copy">
+            <h3>Front of House / Cashier, Host, or Packer</h3>
+            <div class="job-meta">Part-Time · <span>Atlanta, GA</span></div>
+          </div>
+          <a href="#apply" class="job-apply">Apply</a>
+        </article>
+      </div>
+      <p class="rolling-note">General applications stay open, so if you feel like you fit the vibe, send it through.</p>
+    </div>
+  </section>
+  <section class="apply-section" id="apply">
+    <div class="section-shell">
+      <div class="section-kicker"><span class="stencil-label">Tap In With Us</span></div>
+      <h2 class="section-title spray-behind">Apply <span class="accent">Now</span></h2>
+      <p class="section-sub">Drop your info below and upload your resume. Every application gets looked at by the team, especially when the energy and experience line up.</p>
+      <div class="form-layout">
+        <aside class="form-side">
+          <div class="mini-kicker">Before you send it</div>
+          <h3>We need people who come right.</h3>
+          <p><strong>Reliability, respect, coachability, and work ethic</strong> matter here every shift. If that is not your style, this probably is not your lane.</p>
+          <ul>
+            <li>Send your most recent resume</li>
+            <li>Be real about your availability</li>
+            <li>Let us know what makes you a fit for the team</li>
+          </ul>
+          <p><strong>Questions?</strong><br>contact@thebandoatl.com</p>
+        </aside>
+        <div class="form-wrap">
+          <form id="apply-form" action="https://formsubmit.co/ajax/contact@thebandoatl.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New Job Application - The Bando ATL">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="row">
+              <div class="field">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="First Name" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="Last Name" autocomplete="family-name" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="Phone" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="position">Position Applying For</label>
+              <select id="position" name="Position" required>
+                <option value="" disabled selected>Select a position</option>
+                <option value="Kitchen Staff / Cook">Kitchen Staff / Cook</option>
+                <option value="Front of House / Cashier, Host, or Packer">Front of House / Cashier, Host, or Packer</option>
+                <option value="General Application">General Application (no specific role)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="availability">Availability</label>
+              <input type="text" id="availability" name="Availability" placeholder="Example: Friday–Sunday, open availability" required>
+            </div>
+            <div class="field">
+              <label for="resume">Resume Upload</label>
+              <div class="file-drop" id="file-drop">
+                <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" required>
+                <div class="file-label"><strong>Click to upload</strong> or drag and drop your resume here</div>
+                <div id="file-name"></div>
+              </div>
+              <small class="hint">PDF or Word document. Maximum file size: 10 MB.</small>
+            </div>
+            <div class="field">
+              <label for="message">Anything Else We Should Know?</label>
+              <textarea id="message" name="Message" rows="5" placeholder="Tell us about your experience, how you work under pressure, and why you would fit the team."></textarea>
+            </div>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <button type="submit" class="submit-btn" id="submit-btn">Submit Application</button>
+            <div id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="hazard-bar" aria-hidden="true"></div>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img class="footer-logo" src="https://static.wixstatic.com/media/12e68b_3c85501d12e041f296d9cc307c083fc3~mv2.png/v1/fill/w_320,h_249,al_c,q_90/bando%20logo%20white%20glow_edited.png" alt="The Bando ATL logo">
+      <p>West Atlanta's trap museum and food experience.</p>
+    </div>
+    <div>
+      <h3>Location</h3>
+      <p>3050 M.L.K. Jr Dr. SW<br>Suite M<br>Atlanta, GA 30311</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="mailto:contact@thebandoatl.com">contact@thebandoatl.com</a></p>
+      <p>Careers inquiries only</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© The Bando ATL · Careers</div>
+</footer>
+<script>
+  const fileDrop = document.getElementById('file-drop');
+  const fileInput = document.getElementById('resume');
+  const fileName = document.getElementById('file-name');
+  function showFileName(file) {
+    if (!file) return;
+    const maxBytes = 10 * 1024 * 1024;
+    const allowed = [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
+    if (file.size > maxBytes) {
+      fileName.textContent = 'File is larger than 10 MB. Please choose a smaller file.';
+      fileInput.value = '';
+      return;
+    }
+    if (file.type && !allowed.includes(file.type)) {
+      fileName.textContent = 'Please upload a PDF or Word document.';
+      fileInput.value = '';
+      return;
+    }
+    fileName.textContent = 'Selected: ' + file.name;
+  }
+  fileInput.addEventListener('change', () => showFileName(fileInput.files[0]));
+  ['dragenter', 'dragover'].forEach(evt => {
+    fileDrop.addEventListener(evt, (e) => {
+      e.preventDefault();
+      fileDrop.classList.add('dragover');
+    });
+  });
+  ['dragleave', 'drop'].forEach(evt => {
+    fileDrop.addEventListener(evt, (e) => {
+      e.preventDefault();
+      fileDrop.classList.remove('dragover');
+    });
+  });
+  fileDrop.addEventListener('drop', (e) => {
+    if (e.dataTransfer.files.length > 0) {
+      const transfer = new DataTransfer();
+      transfer.items.add(e.dataTransfer.files[0]);
+      fileInput.files = transfer.files;
+      showFileName(fileInput.files[0]);
+    }
+  });
+  document.querySelectorAll('.job-apply').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const card = e.currentTarget.closest('.job-card');
+      const title = card?.querySelector('h3')?.textContent.trim();
+      const select = document.getElementById('position');
+      if (title && [...select.options].some(opt => opt.value === title)) {
+        select.value = title;
+      }
+    });
+  });
+  const form = document.getElementById('apply-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const statusEl = document.getElementById('form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.className = '';
+    statusEl.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      const data = await response.json().catch(() => null);
+      if (response.ok) {
+        statusEl.textContent = "Application received! We'll be in touch if your experience matches an opening.";
+        statusEl.className = 'success';
+        form.reset();
+        fileName.textContent = '';
+      } else {
+        statusEl.textContent = data?.message || 'Something went wrong. Please try again or email your resume to contact@thebandoatl.com.';
+        statusEl.className = 'error';
+      }
+    } catch (error) {
+      statusEl.textContent = 'Network error. Please try again or email your resume to contact@thebandoatl.com.';
+      statusEl.className = 'error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application';
+    }
+  });
+</script>
+</body>
+</html>
